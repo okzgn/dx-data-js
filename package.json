@@ -1,0 +1,28 @@
+{
+  "name": "dx-data",
+  "version": "3.0.0",
+  "description": "dx-data",
+  "type": "module",
+  "main": "index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "license": "MIT",
+  "author": "OKZGN",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okzgn/dx-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/okzgn/dx-data/issues"
+  },
+  "homepage": "https://github.com/okzgn/dx-data#readme"
+}
