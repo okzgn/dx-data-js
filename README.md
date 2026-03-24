@@ -74,7 +74,7 @@ DATAX.off('user');
 By default DATAX uses a plain vanilla adapter. You can swap it for any reactive primitive — for example Angular signals:
 
 ```js
-import { IDATAXReactivityAdapter } from 'dx-data';
+import { IDATAXReactivityAdapter, IDATAXProperty, DATAXReactivityAdapter } from 'dx-data';
 import { signal, WritableSignal } from '@angular/core';
 
 export const AngularReactivityAdapter: IDATAXReactivityAdapter = {
@@ -88,9 +88,36 @@ export const AngularReactivityAdapter: IDATAXReactivityAdapter = {
         };
     }
 };
+
+// To set the adapter globally
+DATAXReactivityAdapter(AngularReactivityAdapter);
+
+// To define state property type definitions
+declare module 'dx-data' {
+    export interface IDATA {
+        appName:string;
+        appVersion:string;
+        appSupportEmail:string;
+        appSupportPhone:string;
+        mainTitle:string;
+        history:any[];
+        defaultUser:{ [key: string]: any };
+        defaultPlace:{ [key: string]: any };
+    }
+
+    export interface IDATAX {
+        lang: IDATAXProperty<string>;
+        user: IDATAXProperty<{ [key: string]: any }>;
+        signedUser: IDATAXProperty<boolean>;
+        place: IDATAXProperty<{ [key: string]: any }>;
+        logo: IDATAXProperty<string>;
+        tabs: IDATAXProperty<boolean>;
+        AIAssistantQuestion: IDATAXProperty<string>;
+    }
+}
 ```
 
-After this, every DATAX property will be an Angular automatic signal, with no need to explicit use of `set` or `update`, but only `DATAX.property()`.
+After this, every DATAX property will automatically act as an Angular signal, removing the need for explicit `set` or `update` calls; instead, you can simply use `DATAX.property()`.
 
 ---
 

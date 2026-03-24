@@ -1,6 +1,6 @@
 {
   "name": "dx-data",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Reactive state management for JavaScript & TypeScript. Zero-dependency & ESM-only. DATAX: proxy-based store with swappable reactivity adapters (Vanilla, Angular, etc.) and deep object interception. DATA: lightweight property interceptor with stackable get/set middleware.",
   "type": "module",
   "main": "index.js",
