@@ -1,7 +1,7 @@
 {
   "name": "dx-data",
-  "version": "3.0.0",
-  "description": "dx-data",
+  "version": "3.0.1",
+  "description": "Reactive state management for JavaScript & TypeScript. Zero-dependency & ESM-only. DATAX: proxy-based store with swappable reactivity adapters (Vanilla, Angular, etc.) and deep object interception. DATA: lightweight property interceptor with stackable get/set middleware.",
   "type": "module",
   "main": "index.js",
   "types": "./index.d.ts",
@@ -15,14 +15,36 @@
     "index.js",
     "index.d.ts"
   ],
+  "keywords": [
+    "DX",
+    "Developer",
+    "Experience",
+    "State",
+    "State-management",
+    "Data",
+    "Data-management",
+    "Reactive",
+    "Reactive-state",
+    "Reactive-adapter",
+    "Reactive-agnostic",
+    "Lightweight",
+    "Zero-dependency",
+    "Dependency-free",
+    "Angular",
+    "Signals"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "sideEffects": true,
   "license": "MIT",
   "author": "OKZGN",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/okzgn/dx-data.git"
+    "url": "git+https://github.com/okzgn/dx-data-js.git"
   },
   "bugs": {
-    "url": "https://github.com/okzgn/dx-data/issues"
+    "url": "https://github.com/okzgn/dx-data-js/issues"
   },
-  "homepage": "https://github.com/okzgn/dx-data#readme"
+  "homepage": "https://github.com/okzgn/dx-data-js#readme"
 }
