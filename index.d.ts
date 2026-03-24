@@ -1,6 +1,10 @@
 export interface IDATAXReactivityAdapter {
-    create: (initialValue: any, options?: any) => { get: () => any, set: (v: any) => void, update: (fn: (v: any) => any) => void };
-    options?:any;
+    create: (initialValue?: any, options?: any) => { 
+        get: () => any, 
+        set: (v: any) => void, 
+        update: (fn: (value: any) => any) => void 
+    };
+    options?: any;
 }
 
 export type IDATAXProperty<T> = any;
@@ -43,3 +47,10 @@ export interface IDATA {
     off: (name: string) => void;
     [key: string]: IDATAProperty<any>;
 }
+
+export const VanillaReactivityAdapter:IDATAXReactivityAdapter;
+export function DATAXReactivityAdapter(newAdapter: IDATAXReactivityAdapter): void;
+
+export const DATAX: IDATAX;
+export const DATA: IDATA;
+export default DATAX;
